@@ -1,5 +1,9 @@
-import { AsideLayout } from '@pluralsight/ps-design-system-layout/react'
+import {
+  AsideLayout,
+  PageHeadingLayout
+} from '@pluralsight/ps-design-system-layout/react'
 import Avatar from '@pluralsight/ps-design-system-avatar/react'
+import Button from '@pluralsight/ps-design-system-button/react'
 import { Heading } from '@pluralsight/ps-design-system-text/react'
 import Icon from '@pluralsight/ps-design-system-icon/react'
 import React from 'react'
@@ -65,7 +69,20 @@ export default styleable(css)(function App(props) {
             </div>
           </AsideLayout.Aside>
         }
-        main={<AsideLayout.Main>qwer</AsideLayout.Main>}
+        main={
+          <AsideLayout.Main>
+            <PageHeadingLayout
+              actions={[
+                <Button appearance={Button.appearances.stroke} key="edit">
+                  Edit
+                </Button>
+              ]}
+              heading={<h3>Meet the Software Creator</h3>}
+            >
+              Your page contents here
+            </PageHeadingLayout>
+          </AsideLayout.Main>
+        }
       />
     </div>
   )
