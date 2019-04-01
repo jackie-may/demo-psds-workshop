@@ -11,3 +11,5 @@
 - [Card](https://design-system.pluralsight.com/components/card/)
 - [Row](https://design-system.pluralsight.com/components/row/)
 - [Dialog](https://design-system.pluralsight.com/components/dialog/)
+- [Form.VerticalLayout](https://design-system.pluralsight.com/components/form/#form.verticallayout)
+- [TextInput](https://design-system.pluralsight.com/components/textinput/)

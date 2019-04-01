@@ -7,17 +7,21 @@ import Avatar from '@pluralsight/ps-design-system-avatar/react'
 import Button from '@pluralsight/ps-design-system-button/react'
 import Card from '@pluralsight/ps-design-system-card/react'
 import Dialog from '@pluralsight/ps-design-system-dialog/react'
+import Form from '@pluralsight/ps-design-system-form/react'
 import { Heading } from '@pluralsight/ps-design-system-text/react'
 import Icon from '@pluralsight/ps-design-system-icon/react'
 import React, { useState } from 'react'
 import Row from '@pluralsight/ps-design-system-row/react'
 import styleable from 'react-styleable'
 import Tag from '@pluralsight/ps-design-system-tag/react'
+import TextInput from '@pluralsight/ps-design-system-textinput/react'
 
 import css from './app.module.css'
 
 export default styleable(css)(function App(props) {
   const [isEdit, setEdit] = useState(false)
+  const [name, setName] = useState('Jake Trent')
+  const [title, setTitle] = useState('Software Creator')
   const interests = [
     'data visualization',
     'es6',
@@ -44,19 +48,19 @@ export default styleable(css)(function App(props) {
         aside={
           <AsideLayout.Aside className={props.css.aside}>
             <Avatar
-              name="Jake Trent"
+              name={name}
               size={Avatar.sizes.xLarge}
               src="https://gravatar.com/avatar/63a1fa126f541c0f0ecf1d74f7a40640?s=320&r=g&d=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fps-cdn%2Fdesign-system%2Fassets%2Ftransparent.gif"
             />
             <header>
               <Heading className={props.css.authorName}>
-                <h1>Jake Trent</h1>
+                <h1>{name}</h1>
               </Heading>
               <Heading
                 className={props.css.authorDetail}
                 size={Heading.sizes.medium}
               >
-                <h2>Software Creator</h2>
+                <h2>{title}</h2>
               </Heading>
               <Heading
                 className={props.css.authorDetail}
@@ -68,7 +72,7 @@ export default styleable(css)(function App(props) {
                     size={Icon.sizes.small}
                     className={props.css.authorDetailIcon}
                   />
-                  Software Creator
+                  Pluralsight
                 </h2>
               </Heading>
             </header>
@@ -97,7 +101,7 @@ export default styleable(css)(function App(props) {
                   Edit
                 </Button>
               ]}
-              heading={<h3>Meet the Software Creator</h3>}
+              heading={<h3>Meet the {title}</h3>}
             >
               <Heading size={Heading.sizes.medium}>
                 <h3>Skills</h3>
@@ -146,7 +150,28 @@ export default styleable(css)(function App(props) {
       />
       {isEdit && (
         <Dialog modal onClose={_ => setEdit(false)}>
-          Dialog stuff
+          <Form.VerticalLayout>
+            <Heading>
+              <h2>Edit profile</h2>
+            </Heading>
+            <TextInput
+              onChange={evt => setName(evt.target.value)}
+              name="name"
+              label="Your name"
+              placeholder="Name"
+              value={name}
+            />
+            <TextInput
+              onChange={evt => setTitle(evt.target.value)}
+              name="title"
+              label="Your title"
+              placeholder="Title"
+              value={title}
+            />
+            <Form.ButtonRow>
+              <Button onClick={_ => setEdit(false)}>Close</Button>
+            </Form.ButtonRow>
+          </Form.VerticalLayout>
         </Dialog>
       )}
     </div>
