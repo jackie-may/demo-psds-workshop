@@ -7,3 +7,4 @@
 - [Text](https://design-system.pluralsight.com/components/text/)
 - [Core typography](https://design-system.pluralsight.com/core/typography/)
 - [Icon](https://design-system.pluralsight.com/components/icon/)
+- [Tag](https://design-system.pluralsight.com/components/tag/)

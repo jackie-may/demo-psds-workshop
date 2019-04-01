@@ -4,10 +4,20 @@ import { Heading } from '@pluralsight/ps-design-system-text/react'
 import Icon from '@pluralsight/ps-design-system-icon/react'
 import React from 'react'
 import styleable from 'react-styleable'
+import Tag from '@pluralsight/ps-design-system-tag/react'
 
 import css from './app.module.css'
 
 export default styleable(css)(function App(props) {
+  const interests = [
+    'data visualization',
+    'es6',
+    'lambdaz',
+    'interfaces',
+    'js',
+    'leadership',
+    'node'
+  ]
   return (
     <div className="app">
       <AsideLayout
@@ -33,11 +43,26 @@ export default styleable(css)(function App(props) {
                 size={Heading.sizes.medium}
               >
                 <h2>
-                  <Icon id={Icon.ids.home} size={Icon.sizes.small} className={props.css.authorDetailIcon} />
+                  <Icon
+                    id={Icon.ids.home}
+                    size={Icon.sizes.small}
+                    className={props.css.authorDetailIcon}
+                  />
                   Software Creator
                 </h2>
               </Heading>
             </heading>
+
+            <Heading size={Heading.sizes.smallCaps}>
+              <h2>Interests You Follow</h2>
+            </Heading>
+            <div className={props.css.tags}>
+              {interests.map(i => (
+                <Tag key={i} size={Tag.sizes.small}>
+                  {i}
+                </Tag>
+              ))}
+            </div>
           </AsideLayout.Aside>
         }
         main={<AsideLayout.Main>qwer</AsideLayout.Main>}
