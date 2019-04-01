@@ -20,3 +20,7 @@
 .tags > div {
   margin: 0 var(--psLayoutSpacingXXSmall) var(--psLayoutSpacingXXSmall) 0;
 }
+
+.skills {
+  list-style: none;
+}

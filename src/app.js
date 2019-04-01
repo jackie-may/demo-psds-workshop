@@ -1,9 +1,11 @@
 import {
   AsideLayout,
+  EqualColumnLayout,
   PageHeadingLayout
 } from '@pluralsight/ps-design-system-layout/react'
 import Avatar from '@pluralsight/ps-design-system-avatar/react'
 import Button from '@pluralsight/ps-design-system-button/react'
+import Card from '@pluralsight/ps-design-system-card/react'
 import { Heading } from '@pluralsight/ps-design-system-text/react'
 import Icon from '@pluralsight/ps-design-system-icon/react'
 import React from 'react'
@@ -22,6 +24,12 @@ export default styleable(css)(function App(props) {
     'leadership',
     'node'
   ]
+  const skills = [
+    ['React', '200'],
+    ['JS', '800'],
+    ['Node.js', '150'],
+    ['Graphql', '1500']
+  ]
   return (
     <div className="app">
       <AsideLayout
@@ -32,7 +40,7 @@ export default styleable(css)(function App(props) {
               size={Avatar.sizes.xLarge}
               src="https://gravatar.com/avatar/63a1fa126f541c0f0ecf1d74f7a40640?s=320&r=g&d=https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fps-cdn%2Fdesign-system%2Fassets%2Ftransparent.gif"
             />
-            <heading>
+            <header>
               <Heading className={props.css.authorName}>
                 <h1>Jake Trent</h1>
               </Heading>
@@ -55,15 +63,15 @@ export default styleable(css)(function App(props) {
                   Software Creator
                 </h2>
               </Heading>
-            </heading>
+            </header>
 
             <Heading size={Heading.sizes.smallCaps}>
               <h2>Interests You Follow</h2>
             </Heading>
             <div className={props.css.tags}>
-              {interests.map(i => (
-                <Tag key={i} size={Tag.sizes.small}>
-                  {i}
+              {interests.map(interest => (
+                <Tag key={interest} size={Tag.sizes.small}>
+                  {interest}
                 </Tag>
               ))}
             </div>
@@ -79,7 +87,28 @@ export default styleable(css)(function App(props) {
               ]}
               heading={<h3>Meet the Software Creator</h3>}
             >
-              Your page contents here
+              <Heading size={Heading.sizes.medium}>
+                <h3>Skills</h3>
+              </Heading>
+              <EqualColumnLayout>
+                <ul className={props.css.skills}>
+                  {skills.map(([skill, amt], i) => (
+                    <li key={skill}>
+                      <Card
+                        title={<Card.Title>{skill}</Card.Title>}
+                        image={
+                          <Card.Image
+                            src={`https://design-system.pluralsight.com/static/img/course${(i %
+                              4) +
+                              1}.jpg`}
+                          />
+                        }
+                        metadata2={[amt + 'm watched']}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </EqualColumnLayout>
             </PageHeadingLayout>
           </AsideLayout.Main>
         }
