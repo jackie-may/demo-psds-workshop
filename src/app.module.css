@@ -1,3 +1,6 @@
 .app {
   text-align: center;
 }
+.aside {
+  padding: var(--psLayoutSpacingLarge);
+}
