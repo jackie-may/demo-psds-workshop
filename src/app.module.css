@@ -4,3 +4,7 @@
 .aside {
   padding: var(--psLayoutSpacingLarge);
 }
+
+.authorName {
+  font-weight: var(--psTypeFontWeightXLight);
+}
