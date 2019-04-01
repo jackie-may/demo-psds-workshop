@@ -10,3 +10,4 @@
 - [Tag](https://design-system.pluralsight.com/components/tag/)
 - [Card](https://design-system.pluralsight.com/components/card/)
 - [Row](https://design-system.pluralsight.com/components/row/)
+- [Dialog](https://design-system.pluralsight.com/components/dialog/)

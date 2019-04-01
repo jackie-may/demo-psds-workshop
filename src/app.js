@@ -6,9 +6,10 @@ import {
 import Avatar from '@pluralsight/ps-design-system-avatar/react'
 import Button from '@pluralsight/ps-design-system-button/react'
 import Card from '@pluralsight/ps-design-system-card/react'
+import Dialog from '@pluralsight/ps-design-system-dialog/react'
 import { Heading } from '@pluralsight/ps-design-system-text/react'
 import Icon from '@pluralsight/ps-design-system-icon/react'
-import React from 'react'
+import React, { useState } from 'react'
 import Row from '@pluralsight/ps-design-system-row/react'
 import styleable from 'react-styleable'
 import Tag from '@pluralsight/ps-design-system-tag/react'
@@ -16,6 +17,7 @@ import Tag from '@pluralsight/ps-design-system-tag/react'
 import css from './app.module.css'
 
 export default styleable(css)(function App(props) {
+  const [isEdit, setEdit] = useState(false)
   const interests = [
     'data visualization',
     'es6',
@@ -87,7 +89,11 @@ export default styleable(css)(function App(props) {
           <AsideLayout.Main>
             <PageHeadingLayout
               actions={[
-                <Button appearance={Button.appearances.stroke} key="edit">
+                <Button
+                  appearance={Button.appearances.stroke}
+                  key="edit"
+                  onClick={_ => setEdit(true)}
+                >
                   Edit
                 </Button>
               ]}
@@ -138,6 +144,11 @@ export default styleable(css)(function App(props) {
           </AsideLayout.Main>
         }
       />
+      {isEdit && (
+        <Dialog modal onClose={_ => setEdit(false)}>
+          Dialog stuff
+        </Dialog>
+      )}
     </div>
   )
 })
