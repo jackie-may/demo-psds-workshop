@@ -9,6 +9,7 @@ import Card from '@pluralsight/ps-design-system-card/react'
 import { Heading } from '@pluralsight/ps-design-system-text/react'
 import Icon from '@pluralsight/ps-design-system-icon/react'
 import React from 'react'
+import Row from '@pluralsight/ps-design-system-row/react'
 import styleable from 'react-styleable'
 import Tag from '@pluralsight/ps-design-system-tag/react'
 
@@ -29,6 +30,11 @@ export default styleable(css)(function App(props) {
     ['JS', '800'],
     ['Node.js', '150'],
     ['Graphql', '1500']
+  ]
+  const learning = [
+    ['React: Getting Started', 'Samer Buna', 15],
+    ['Styling React Components', 'Jake Trent', 100],
+    ['End User Security Awareness', 'Brien Posey', 24]
   ]
   return (
     <div className="app">
@@ -109,6 +115,25 @@ export default styleable(css)(function App(props) {
                   ))}
                 </ul>
               </EqualColumnLayout>
+
+              <Heading size={Heading.sizes.medium}>
+                <h3>Learning</h3>
+              </Heading>
+              {learning.map(([title, author, progress], i) => (
+                <Row
+                  key={title}
+                  title={title}
+                  progress={progress}
+                  image={
+                    <Row.Image
+                      src={`https://design-system.pluralsight.com/static/img/course${(i %
+                        4) +
+                        1}.jpg`}
+                    />
+                  }
+                  metadata1={[author, 'Advanced']}
+                />
+              ))}
             </PageHeadingLayout>
           </AsideLayout.Main>
         }

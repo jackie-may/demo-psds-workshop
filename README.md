@@ -9,3 +9,4 @@
 - [Icon](https://design-system.pluralsight.com/components/icon/)
 - [Tag](https://design-system.pluralsight.com/components/tag/)
 - [Card](https://design-system.pluralsight.com/components/card/)
+- [Row](https://design-system.pluralsight.com/components/row/)
