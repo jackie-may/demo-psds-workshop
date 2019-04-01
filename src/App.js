@@ -1,10 +1,16 @@
-import React, { Component } from 'react'
-import './app.module.css'
+import { AsideLayout } from '@pluralsight/ps-design-system-layout/react'
+import React from 'react'
+import styleable from 'react-styleable'
 
-class App extends Component {
-  render() {
-    return <div className="app" />
-  }
-}
+import css from './app.module.css'
 
-export default App
+export default styleable(css)(function App() {
+  return (
+    <div className="app">
+      <AsideLayout
+        aside={<AsideLayout.Aside>asdf</AsideLayout.Aside>}
+        main={<AsideLayout.Main>qwer</AsideLayout.Main>}
+      />
+    </div>
+  )
+})
