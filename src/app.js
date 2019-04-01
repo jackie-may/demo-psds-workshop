@@ -10,9 +10,11 @@ import Dialog from '@pluralsight/ps-design-system-dialog/react'
 import Form from '@pluralsight/ps-design-system-form/react'
 import { Heading } from '@pluralsight/ps-design-system-text/react'
 import Icon from '@pluralsight/ps-design-system-icon/react'
+import Link from '@pluralsight/ps-design-system-link/react'
 import React, { useState } from 'react'
 import Row from '@pluralsight/ps-design-system-row/react'
 import styleable from 'react-styleable'
+import Switch from '@pluralsight/ps-design-system-switch/react'
 import Tag from '@pluralsight/ps-design-system-tag/react'
 import TextInput from '@pluralsight/ps-design-system-textinput/react'
 
@@ -22,6 +24,8 @@ export default styleable(css)(function App(props) {
   const [isEdit, setEdit] = useState(false)
   const [name, setName] = useState('Jake Trent')
   const [title, setTitle] = useState('Software Creator')
+  const [isPublic, setPublic] = useState(false)
+
   const interests = [
     'data visualization',
     'es6',
@@ -42,6 +46,7 @@ export default styleable(css)(function App(props) {
     ['Styling React Components', 'Jake Trent', 100],
     ['End User Security Awareness', 'Brien Posey', 24]
   ]
+
   return (
     <div className="app">
       <AsideLayout
@@ -75,6 +80,14 @@ export default styleable(css)(function App(props) {
                   Pluralsight
                 </h2>
               </Heading>
+              {isPublic && (
+                <Link>
+                  <a href="/public/url" className={props.css.authorLink}>
+                    <Icon id={Icon.ids.link} />
+                    Public profile URL
+                  </a>
+                </Link>
+              )}
             </header>
 
             <Heading size={Heading.sizes.smallCaps}>
@@ -168,6 +181,9 @@ export default styleable(css)(function App(props) {
               placeholder="Title"
               value={title}
             />
+            <Switch checked={isPublic} onClick={_ => setPublic(!isPublic)}>
+              Profile is public
+            </Switch>
             <Form.ButtonRow>
               <Button onClick={_ => setEdit(false)}>Close</Button>
             </Form.ButtonRow>

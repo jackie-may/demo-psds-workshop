@@ -13,3 +13,5 @@
 - [Dialog](https://design-system.pluralsight.com/components/dialog/)
 - [Form.VerticalLayout](https://design-system.pluralsight.com/components/form/#form.verticallayout)
 - [TextInput](https://design-system.pluralsight.com/components/textinput/)
+- [Switch](https://design-system.pluralsight.com/components/switch/)
+- [Link](https://design-system.pluralsight.com/components/link/)

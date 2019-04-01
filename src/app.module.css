@@ -16,6 +16,10 @@
 .authorDetailIcon {
   margin-right: var(--psLayoutSpacingXSmall);
 }
+.authorLink {
+  display: flex;
+  margin-top: var(--psLayoutSpacingMedium);
+}
 
 .tags > div {
   margin: 0 var(--psLayoutSpacingXXSmall) var(--psLayoutSpacingXXSmall) 0;
