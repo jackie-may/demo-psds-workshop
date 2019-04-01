@@ -7,4 +7,12 @@
 
 .authorName {
   font-weight: var(--psTypeFontWeightXLight);
+  margin-bottom: 0;
+}
+.authorDetail {
+  color: var(--psColorsGray02);
+  margin: 0;
+}
+.authorDetailIcon {
+  margin-right: var(--psLayoutSpacingXSmall);
 }
