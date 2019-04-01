@@ -23,10 +23,16 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     --> <title>Design System Workshop</title>
     <link rel="stylesheet" href="https://unpkg.com/@pluralsight/ps-design-system-normalize" />
+    <link rel="stylesheet" href="//cloud.typography.com/6966154/6397212/css/fonts.css" />
+    <link rel="stylesheet" href="//s2.pluralsight.com/prism/prism-bootstrap-16.x.css" />
+    <script src="//s2.pluralsight.com/prism/prism-bootstrap-16.x.js"></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="ps-container">
+      <div id="ps-chrome"></div>
+      <div id="ps-main" tabindex="-1"></div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -37,5 +43,14 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  <script>
+    Prism.init({
+      launchDarklyClientId: '5a7ca26c0826d72e1c7c9fb4',
+      userHandle: 'prism-test-user',
+      userName: 'Jake Trent',
+      userEmail: 'jtrent@instructure.com',
+      currentNavLinkId: 'library-home'
+    })
+  </script>
   </body>
 </html>
