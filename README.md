@@ -1,4 +1,24 @@
-[Design System docs](https://design-system.pluralsight.com)
+# Pluralsight Design System Workshop
+
+__Target audience:__ People who want to learn how to use the Design System, write JavaScript, understand React a bit.
+
+__Desired outcome:__ Attendees feel more familiar with what's in the Design System, how to install it and apply it to a design in their project.
+
+## Setup (do before coming)
+
+[Install Node.js](https://nodejs.org/en/) (any recent version should be fine)
+
+```
+git clone git@github.com:jaketrent/demo-psds-workshop.git
+cd demo-psds-workshop
+npm install
+```
+
+(Installation before the workshop will ensure you have the proper Design System code available to you in case Internet access at the conference is unreliable.)
+
+## Topics
+
+We will cover using many parts of the [Design System](https://design-system.pluralsight.com).  These parts include:
 
 - [Prism](https://bit.ly/prismnav)
 - [AsideLayout](https://design-system.pluralsight.com/components/layout/#aside-layout)
