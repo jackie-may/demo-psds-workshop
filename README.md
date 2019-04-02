@@ -1,6 +1,6 @@
 # Pluralsight Design System Workshop
 
-__Target audience:__ People who want to learn how to use the Design System, write JavaScript, understand React a bit.
+__Target audience:__ People who want to learn how to use the Design System, who write JavaScript, and who understand React a bit.
 
 __Format:__ Follow-along implementation of a visual design using the Design System.  You could also just watch, but that's less fun.  Open questions throughout.
 
