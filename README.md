@@ -38,3 +38,9 @@ We will cover using many parts of the [Design System](https://design-system.plur
 - 14 [TextInput](https://design-system.pluralsight.com/components/textinput/)
 - 15 [Switch](https://design-system.pluralsight.com/components/switch/)
 - 16 [Link](https://design-system.pluralsight.com/components/link/)
+
+## Snippets
+
+If you'd like to follow along but save your tired fingers a bunch of typing, you can use your copy-paste fingers to pull snippets out of the [snippets/](https://github.com/jaketrent/demo-psds-workshop/tree/master/snippets) directory.
+
+Not every bit of code is recorded there, and day-of might turn out different (wing it!), but it could be helpful when you're trying to catch up or focus on a particular feature add.
