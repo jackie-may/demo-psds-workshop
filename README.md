@@ -44,3 +44,17 @@ We will cover using many parts of the [Design System](https://design-system.plur
 If you'd like to follow along but save your tired fingers a bunch of typing, you can use your copy-paste fingers to pull snippets out of the [snippets/](https://github.com/jaketrent/demo-psds-workshop/tree/master/snippets) directory.
 
 Not every bit of code is recorded there, and day-of might turn out different (wing it!), but it could be helpful when you're trying to catch up or focus on a particular feature add.
+
+## Goal
+
+Learn to use the Design System by translating the mockup in [mockups/](https://github.com/jaketrent/demo-psds-workshop/tree/master/mockups) into a functional JavaScript UI using as much of the Design System as seems appropriate. 
+
+## Start Editing
+
+```
+npm start
+vim src/app.js
+```
+
+
+
