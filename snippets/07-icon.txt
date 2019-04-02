@@ -1,0 +1,25 @@
+## A
+
+import Icon from '@pluralsight/ps-design-system-icon/react'
+
+## B
+
+<Heading
+  className={props.css.authorDetail}
+  size={Heading.sizes.medium}
+>
+  <h2>
+    <Icon id={Icon.ids.home} size={Icon.sizes.small} className={props.css.authorDetailIcon} />
+    Software Creator
+  </h2>
+</Heading>
+
+## C
+
+.authorDetail {
+  color: var(--psColorsGray02);
+  margin: 0;
+}
+.authorDetailIcon {
+  margin-right: var(--psLayoutSpacingXSmall);
+}

@@ -1,0 +1,15 @@
+## A
+
+import { Heading } from '@pluralsight/ps-design-system-text/react'
+
+## B
+
+<Heading className={props.css.authorName}>
+  <h1>Jake Trent</h1>
+</Heading>
+
+## C
+
+.authorName {
+  font-weight: var(--psTypeFontWeightXLight);
+}

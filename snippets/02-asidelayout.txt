@@ -1,0 +1,11 @@
+## A
+
+import { AsideLayout } from '@pluralsight/ps-design-system-layout/react'
+
+## B 
+
+<AsideLayout
+  aside={<AsideLayout.Aside>asdf</AsideLayout.Aside>}
+  main={<AsideLayout.Main>qwer</AsideLayout.Main>}
+/>
+

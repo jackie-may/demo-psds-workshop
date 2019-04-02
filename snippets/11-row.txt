@@ -1,0 +1,32 @@
+## A
+
+import Row from '@pluralsight/ps-design-system-row/react'
+
+## B
+
+const learning = [
+  ['React: Getting Started', 'Samer Buna', 15],
+  ['Styling React Components', 'Jake Trent', 100],
+  ['End User Security Awareness', 'Brien Posey', 24]
+]
+
+## C
+
+<Heading size={Heading.sizes.medium}>
+  <h3>Learning</h3>
+</Heading>
+{learning.map(([title, author, progress], i) => (
+  <Row
+    key={title}
+    title={title}
+    progress={progress}
+    image={
+      <Row.Image
+        src={`https://design-system.pluralsight.com/static/img/course${(i %
+          4) +
+          1}.jpg`}
+      />
+    }
+    metadata1={[author, 'Advanced']}
+  />
+))}

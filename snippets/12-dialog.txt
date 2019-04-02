@@ -1,0 +1,25 @@
+## A
+
+import Dialog from '@pluralsight/ps-design-system-dialog/react'
+
+import React, { useState } from 'react'
+
+## B
+
+const [isEdit, setEdit] = useState(false)
+
+## C
+
+<Button
+  appearance={Button.appearances.stroke}
+  key="edit"
+  onClick={_ => setEdit(true)}
+>
+
+## D
+
+{isEdit && (
+  <Dialog modal onClose={_ => setEdit(false)}>
+    Dialog stuff
+  </Dialog>
+)} 

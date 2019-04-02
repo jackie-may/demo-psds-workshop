@@ -2,6 +2,8 @@
 
 __Target audience:__ People who want to learn how to use the Design System, write JavaScript, understand React a bit.
 
+__Format:__ Follow-along implementation of a visual design using the Design System.  You could also just watch, but that's less fun.  Open questions throughout.
+
 __Desired outcome:__ Attendees feel more familiar with what's in the Design System, how to install it and apply it to a design in their project.
 
 ## Setup (do before coming)

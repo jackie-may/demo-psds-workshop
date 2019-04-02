@@ -1,0 +1,35 @@
+## A
+
+import Form from '@pluralsight/ps-design-system-form/react'
+
+import TextInput from '@pluralsight/ps-design-system-textinput/react'
+
+## B
+
+const [name, setName] = useState('Jake Trent')
+const [title, setTitle] = useState('Software Creator')
+
+## C
+
+<Form.VerticalLayout>
+  <Heading>
+    <h2>Edit profile</h2>
+  </Heading>
+  <TextInput
+    onChange={evt => setName(evt.target.value)}
+    name="name"
+    label="Your name"
+    placeholder="Name"
+    value={name}
+  />
+  <TextInput
+    onChange={evt => setTitle(evt.target.value)}
+    name="title"
+    label="Your title"
+    placeholder="Title"
+    value={title}
+  />
+  <Form.ButtonRow>
+    <Button onClick={_ => setEdit(false)}>Close</Button>
+  </Form.ButtonRow>
+</Form.VerticalLayout>

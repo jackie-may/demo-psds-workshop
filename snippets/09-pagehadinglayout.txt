@@ -1,0 +1,16 @@
+## A
+
+import Button from '@pluralsight/ps-design-system-button/react'
+
+## B
+
+<PageHeadingLayout
+  actions={[
+    <Button appearance={Button.appearances.stroke} key="edit">
+      Edit
+    </Button>
+  ]}
+  heading={<h3>Meet the Software Creator</h3>}
+>
+  Your page contents here
+</PageHeadingLayout>

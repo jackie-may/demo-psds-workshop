@@ -1,0 +1,38 @@
+## A in <head />
+
+<link rel="stylesheet" href="https://unpkg.com/@pluralsight/ps-design-system-normalize" />
+<link rel="stylesheet" href="//cloud.typography.com/6966154/6397212/css/fonts.css" />
+<link rel="stylesheet" href="//s2.pluralsight.com/prism/prism-bootstrap-16.x.css" />
+<script src="//s2.pluralsight.com/prism/prism-bootstrap-16.x.js"></script>
+
+## B markup in <body />
+
+<div id="ps-container">
+  <div id="ps-chrome"></div>
+  <div id="ps-main" tabindex="-1"></div>
+</div>
+
+## C init at end of <body />
+
+<script>
+  Prism.init({
+    launchDarklyClientId: '5a7ca26c0826d72e1c7c9fb4',
+    userHandle: 'prism-test-user',
+    userName: 'Jake Trent',
+    userEmail: 'jtrent@instructure.com',
+    currentNavLinkId: 'library-home'
+  })
+</script>
+
+## D in index.css
+
+@import '../node_modules/@pluralsight/ps-design-system-core/css/colors.module.css';
+@import '../node_modules/@pluralsight/ps-design-system-core/css/layout.module.css';
+@import '../node_modules/@pluralsight/ps-design-system-core/css/type.module.css';
+
+body {
+  background: var(--psColorsGray06);
+  color: var(--psColorsWhite);
+  margin: 0;
+  padding: 0;
+}

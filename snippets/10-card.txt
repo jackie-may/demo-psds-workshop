@@ -1,0 +1,43 @@
+## A
+
+import Card from '@pluralsight/ps-design-system-card/react'
+
+## B
+
+const skills = [
+  ['React', '200'],
+  ['JS', '800'],
+  ['Node.js', '150'],
+  ['Graphql', '1500']
+]
+
+## C
+
+<Heading size={Heading.sizes.medium}>
+  <h3>Skills</h3>
+</Heading>
+<EqualColumnLayout>
+  <ul className={props.css.skills}>
+    {skills.map(([skill, amt], i) => (
+      <li key={skill}>
+        <Card
+          title={<Card.Title>{skill}</Card.Title>}
+          image={
+            <Card.Image
+              src={`https://design-system.pluralsight.com/static/img/course${(i %
+                4) +
+                1}.jpg`}
+            />
+          }
+          metadata2={[amt + 'm watched']}
+        />
+      </li>
+    ))}
+  </ul>
+</EqualColumnLayout>
+
+## D
+
+.skills {
+  list-style: none;
+}

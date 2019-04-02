@@ -1,0 +1,31 @@
+## A
+
+import Switch from '@pluralsight/ps-design-system-switch/react'
+
+## B
+
+const [isPublic, setPublic] = useState(false)
+
+## C
+
+{isPublic && (
+  <Link>
+    <a href="/public/url" className={props.css.authorLink}>
+      <Icon id={Icon.ids.link} />
+      Public profile URL
+    </a>
+  </Link>
+)}          
+
+## D
+
+<Switch checked={isPublic} onClick={_ => setPublic(!isPublic)}>
+  Profile is public
+</Switch>
+
+## E
+
+.authorLink {
+  display: flex;
+  margin-top: var(--psLayoutSpacingMedium);
+}

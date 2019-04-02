@@ -1,0 +1,22 @@
+## A
+
+import Tag from '@pluralsight/ps-design-system-tag/react'
+
+## B
+
+<Heading size={Heading.sizes.smallCaps}>
+  <h2>Interests You Follow</h2>
+</Heading>
+<div className={props.css.tags}>
+  {interests.map(i => (
+    <Tag key={i} size={Tag.sizes.small}>
+      {i}
+    </Tag>
+  ))}
+</div>
+
+## C
+
+.tags > div {
+  margin: 0 var(--psLayoutSpacingXXSmall) var(--psLayoutSpacingXXSmall) 0;
+}
