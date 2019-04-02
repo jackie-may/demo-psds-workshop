@@ -1,5 +1,7 @@
 ## A
 
+import Link from '@pluralsight/ps-design-system-link/react'
+
 import Switch from '@pluralsight/ps-design-system-switch/react'
 
 ## B
